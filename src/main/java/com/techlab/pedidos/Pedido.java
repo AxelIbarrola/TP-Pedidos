@@ -1,4 +1,6 @@
 package com.techlab.pedidos;
+import com.techlab.excepciones.StockInsuficienteException;
+
 import java.util.ArrayList;
 
 public class Pedido {
@@ -22,6 +24,12 @@ public class Pedido {
             total += (pedido.getCantidad() * pedido.getProducto().getPrecio());
         }
         return total;
+    }
+
+    public void confirmarPedido() throws StockInsuficienteException {
+        for (LineaPedido linea : lineaPedido) {
+            linea.getProducto().reducirStock(linea.getCantidad());
+        }
     }
 
     public ArrayList<LineaPedido> getLineaPedido(){

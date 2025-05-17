@@ -167,8 +167,6 @@ public class Main {
                             if (cantidad > productoParaPedido.getStock()) {
                                 System.out.println("Error: Stock insuficiente para ese producto.");
                                 continue;
-                            } else {
-                                productoParaPedido.reducirStock(cantidad);
                             }
 
                             LineaPedido lineaPedido = new LineaPedido(productoParaPedido, cantidad);
@@ -181,8 +179,10 @@ public class Main {
                         }
 
                         if (!pedido.getLineaPedido().isEmpty()) {
-                            pedidoService.agregarPedido(pedido);
-                            System.out.println("Pedido creado con éxito. Total: $" + pedido.calcularTotal());
+                                pedido.confirmarPedido();
+                                pedidoService.agregarPedido(pedido);
+                                System.out.println("Pedido creado con éxito. Total: $" + pedido.calcularTotal());
+
                         } else {
                             System.out.println("No se agregó ningún producto al pedido.");
                         }
