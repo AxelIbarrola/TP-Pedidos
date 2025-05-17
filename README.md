@@ -2,7 +2,7 @@
 
 Este proyecto es una aplicación de consola desarrollada en Java que permite gestionar productos y realizar pedidos. Está diseñado siguiendo principios de programación orientada a objetos y buenas prácticas como el uso de excepciones personalizadas, separación de responsabilidades y validaciones robustas.
 Es un proyecto con fines educativos para el programa de TalentoTech, es mi primer contacto con Java.
----
+
 
 ## 📋 Funcionalidades
 
