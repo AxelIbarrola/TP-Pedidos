@@ -44,5 +44,5 @@ Es un proyecto con fines educativos para el programa de TalentoTech, es mi prime
 
 1. Cloná el repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/tu-repo.git
-   cd tu-repo
+   git clone https://github.com/AxelIbarrola/TP-Pedidos.git
+   cd Tp-Pedidos
